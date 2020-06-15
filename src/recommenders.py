@@ -11,6 +11,13 @@ from implicit.nearest_neighbours import bm25_weight, tfidf_weight
 
 
 class MainRecommender:
+    """Рекоммендации, которые можно получить из ALS
+    Input
+    -----
+    user_item_matrix: pd.DataFrame
+        Матрица взаимодействий user-item
+    """
+
     def __init__(self, data, weighting=True):
 
         # Топ покупок каждого юзера
